@@ -15,7 +15,7 @@ const ts = require('./trie-storage.js'); // Require the trie module
 let trie = new ts.root(); // Create a new trie 
 
 ```
-<i>Omitted from future examples for simplicity</i>
+<i>Omitted from future examples for simplicity.</i>
 
 ## Usage
 
