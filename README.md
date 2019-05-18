@@ -40,7 +40,7 @@ trie.store(myData, "myKey");
 
 ### get(datakey)
 
-Fetches stored data which is using a key of `datakey`. Returns `undefined` if no data is found.
+Fetches the stored data which is using a key of `datakey`. Returns `undefined` if no data is found.
 
 Example: 
 
