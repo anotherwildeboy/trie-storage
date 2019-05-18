@@ -7,9 +7,11 @@ JavaScript implementation of a Trie structure for high speed data storage and re
 Runtime of O(M), where M is the number of characters in an object's key.
   
 ## Setup 
-<i>Omitted from future examples for simplicity</i>
+
 
 A new tree can be created using the `root` constructor inside the `tree-storage` module.
+
+Example: <i>Omitted from future examples for simplicity</i>
 
 ```js
 
