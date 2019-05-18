@@ -3,7 +3,7 @@
 
 [Trie - Wikipedia Page](https://en.wikipedia.org/wiki/Trie)
 
-JavaScript implementation of a Trie structure for high speed data storage and retrival (at the expense of memory).
+JavaScript implementation of a Trie structure for high speed data storage and retrival (at the expense of storage space).
 
 Runtime of O(M), where M is the number of characters in an object's key.
   
