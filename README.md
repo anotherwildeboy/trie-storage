@@ -67,3 +67,15 @@ trie.remove("myKey");
 let data = trie.get("myKey"); // Returns undefined
 
 ```
+
+### .length
+
+Returns the number accessible elements inside a given tree.
+
+Example:
+
+```js
+
+console.log(trie.length); 
+
+```
