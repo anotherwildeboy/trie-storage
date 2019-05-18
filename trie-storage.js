@@ -17,8 +17,8 @@ module.exports.root = class {
 	}
 }
 
-function checkDone(count, datakey) {
-	return (datakey.length - 1 <= count ? true : false);
+function checkDone(depth, datakey) {
+	return (datakey.length - 1 <= depth ? true : false);
 }
 
 function storeData(data, datakey) {
@@ -38,66 +38,66 @@ function removeData(datakey) {
 	return result;
 }
 
-function recursiveInsert(currentNode, count, datakey, data) {
-	let subkey = datakey.substring(count, count + 1);
+function recursiveInsert(currentNode, depth, datakey, data) {
+	let subkey = datakey.substring(depth, depth + 1);
 	for (let i = 0; i < currentNode.pointer; i++) {
 		if (currentNode.branches[i].key == subkey) {
-			if (checkDone(count, datakey)) {
+			if (checkDone(depth, datakey)) {
 				currentNode.branches[i].data = data;
 				currentNode.branches[i].alive = true;
 				return currentNode.branches;
 			}
 			else {
 				currentNode = currentNode.branches[i];
-				count++;
-				return recursiveInsert(currentNode, count, datakey, data);
+				depth++;
+				return recursiveInsert(currentNode, depth, datakey, data);
 			}
 		}
 	}
-	let newEmptyNode = new treenode(datakey.substring(count, count + 1));
+	let newEmptyNode = new treenode(datakey.substring(depth, depth + 1));
 	currentNode.branches.push(newEmptyNode);
 	currentNode.pointer++;
 	currentNode = newEmptyNode;
-	if (checkDone(count, datakey)) {
+	if (checkDone(depth, datakey)) {
 		currentNode.data = data;
 		return currentNode.branches;
 	}
 	else {
-		count++;
-		return recursiveInsert(currentNode, count, datakey, data);
+		depth++;
+		return recursiveInsert(currentNode, depth, datakey, data);
 	}
 }
 
-function recursiveRetrieve(currentNode, count, datakey) {
-	let subkey = datakey.substring(count, count + 1);
+function recursiveRetrieve(currentNode, depth, datakey) {
+	let subkey = datakey.substring(depth, depth + 1);
 	for (let i = 0; i < currentNode.pointer; i++) {
 		if (currentNode.branches[i].key == subkey) {
-			if (checkDone(count, datakey) && currentNode.branches[i].alive) {
+			if (checkDone(depth, datakey) && currentNode.branches[i].alive) {
 				return currentNode.branches[i].data;
 			}
 			else {
 				currentNode = currentNode.branches[i];
-				count++;
-				return recursiveRetrieve(currentNode, count, datakey);
+				depth++;
+				return recursiveRetrieve(currentNode, depth, datakey);
 			}
 		}
 	}
 	return undefined;
 }
 
-function recursiveRemove(currentNode, count, datakey) {
-	let subkey = datakey.substring(count, count + 1);
+function recursiveRemove(currentNode, depth, datakey) {
+	let subkey = datakey.substring(depth, depth + 1);
 	for (let i = 0; i < currentNode.pointer; i++) {
 		if (currentNode.branches[i].key == subkey) {
-			if (checkDone(count, datakey)) {
+			if (checkDone(depth, datakey)) {
 				let data = currentNode.branches[i].data;
 				currentNode.branches[i].alive = false;
 				return data;
 			}
 			else {
 				currentNode = currentNode.branches[i];
-				count++;
-				return recursiveRetrieve(currentNode, count, datakey);
+				depth++;
+				return recursiveRetrieve(currentNode, depth, datakey);
 			}
 		}
 	}
