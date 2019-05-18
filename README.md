@@ -1,5 +1,6 @@
 # trie-storage
-![MIT Licence](https://img.shields.io/badge/licence-MIT-brightgreen.svg?style=flat) ![0 dependencies](https://img.shields.io/badge/dependencies-none-brightgreen.svg?style=flat)
+![MIT Licence](https://img.shields.io/badge/licence-MIT-brightgreen.svg?style=flat) ![0 dependencies](https://img.shields.io/badge/dependencies-none-brightgreen.svg?style=flat) ![runtime O(M)](https://img.shields.io/badge/runtime-O(M)-blue.svg?style=flat)
+
 
 [Trie - Wikipedia Page](https://en.wikipedia.org/wiki/Trie)
 
