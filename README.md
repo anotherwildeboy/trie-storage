@@ -8,11 +8,13 @@ Runtime of O(M), where M is the number of characters in an object's key.
   
 ## Setup
 
+A new tree can be created using the `root` constructor inside the `tree-storage` module.
+
 ```js
 
 const ts = require('./trie-storage.js'); // Require the trie module
 
-let trie = new ts.root(); // Create a new trie 
+let trie = new ts.root(); // Create a new tree 
 
 ```
 <i>Omitted from future examples for simplicity.</i>
