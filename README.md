@@ -6,7 +6,8 @@ JavaScript implementation of a Trie structure for high speed data storage and re
 
 Runtime of O(M), where M is the number of characters in an object's key.
   
-## Setup
+## Setup 
+<i>Omitted from future examples for simplicity</i>
 
 A new tree can be created using the `root` constructor inside the `tree-storage` module.
 
@@ -17,7 +18,7 @@ const ts = require('./trie-storage.js'); // Require the trie module
 let trie = new ts.root(); // Create a new tree 
 
 ```
-<i>Omitted from future examples for simplicity.</i>
+
 
 ## Usage
 
