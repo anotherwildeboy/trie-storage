@@ -9,7 +9,7 @@ Runtime of <b>O(M)</b>, where M is the number of characters in an object's key.
 ## Setup 
 
 
-A new tree can be created using the `root` constructor inside the `tree-storage` module.
+Create a new tree using the `root` constructor inside the `tree-storage` module.
 
 Example: <i>(Omitted from future examples for simplicity)</i>
 
