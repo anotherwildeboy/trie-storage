@@ -78,6 +78,6 @@ Example:
 
 ```js
 
-console.log(trie.length); 
+let nodeCount = trie.length; 
 
 ```
