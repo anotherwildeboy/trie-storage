@@ -2,9 +2,9 @@
 ![MIT Licence](https://img.shields.io/badge/licence-MIT-brightgreen.svg?style=flat) ![0 dependencies](https://img.shields.io/badge/dependencies-none-brightgreen.svg?style=flat) ![runtime O(M)](https://img.shields.io/badge/runtime-O(M)-blue.svg?style=flat)
 
 
-JavaScript implementation of a Trie structure for high speed data storage and retrival (at the expense of storage space).
+JavaScript implementation of a Trie structure for high speed data storage and retrival.
 
-Runtime of <b>O(M)</b>, where M is the number of characters in an object's key. 
+Runtime of <b>O(M)</b>, where M is the character count of an object's key. 
   
 ## Setup 
 
@@ -56,7 +56,7 @@ let data = trie.get("myKey");
 
 ### remove(datakey)
 
-Returns the data stored using a key of `datakey` before removing it from all future searches. 
+Returns the data stored using a key of `datakey` before removing it from the trie. 
 
 Example: 
 
@@ -72,7 +72,7 @@ let data = trie.get("myKey"); // Returns undefined
 
 ### .length
 
-Returns the number accessible elements inside a given tree.
+Returns the number of accessible elements inside a given tree.
 
 Example:
 
